@@ -10,6 +10,6 @@
    (if (= counter 0)
    product
    (iter b
-   (- counter 1)
-   (* b product))))
+    (- counter 1)
+    (* b product))))
  (iter b n 1))
