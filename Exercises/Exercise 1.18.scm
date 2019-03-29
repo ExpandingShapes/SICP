@@ -1,0 +1,10 @@
+(define (halve x) (/ x 2))
+(define (even? x) (= (remainder x 2) 0))
+(define (multiply-by-2 x) (* x 2))
+
+(define (fast-multiply x y)
+  (let multiply ((x x) (y y) (a 0))
+    (cond ((or (= y 0) (= x 0)) 0)
+          ((= y 1) (+ a x))
+          ((even? y) (multiply (multiply-by-2 x) (halve y) a))
+          ((not (even? y)) (multiply x (- y 1) (+ x a))))))
