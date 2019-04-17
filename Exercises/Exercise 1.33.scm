@@ -30,4 +30,14 @@
 (define (sum-of-squared-primes a b)
   (sum square a inc b prime?))
   
-  ;a subtask
+;a subtask
+;b subtask
+
+(define (product term a next b filter)
+  (filtered-accumulate * 1 term a next b filter))
+
+(define (prod-b n)
+  (define (filter-b a)
+    (or (prime? a) (prime? n)))
+  (product identity 1 inc (- n 1) filter-b))
+;b subtask
