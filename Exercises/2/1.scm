@@ -4,5 +4,5 @@
       x))
       
 (define (make-rat n d)
-  (let ((g (gcd n d)))
-    (cons (abs (/ n g)) (/ d g))))
+  (let ((g (gcd n (abs d))))
+    (cons (/ n g) (abs (/ d g)))))
