@@ -1,8 +1,0 @@
-(define (proced-2 a b c)
-  (define (sum-two-squares x y) (+ (* x x) (* y y)))
-  (if (and (equal? a b) (equal? b c))
-    ('All three numbers cannot be equal to each other)
-    (cond ((and (< a b) (< a c)) (sum-two-squares b c))
-          ((and (< b a) (< b c)) (sum-two-squares a c))
-          ((and (< c a) (< c b)) (sum-two-squares a b))
-          (else 'There cannot be two least equal numbers given))))
