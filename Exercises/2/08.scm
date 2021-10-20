@@ -8,8 +8,8 @@
              
 ;describe how the difference of two intervals may be computed
 (define (sub-interval x y)
-  (make-interval (- (lower-bound x) (upper-bound y))
-                 (- (upper-bound x) (lower-bound y))))
+  (make-interval (- (lower-bound x) (lower-bound y))
+                 (- (upper-bound x) (upper-bound y))))
 ;
              
 (define (mul-interval x y)
