@@ -11,8 +11,8 @@
                  (+ (upper-bound x) (upper-bound y))))
              
 (define (sub-interval x y)
-  (make-interval (- (lower-bound x) (lower-bound y))
-                 (- (upper-bound x) (upper-bound y))))
+  (make-interval (- (lower-bound x) (upper-bound y))
+                 (- (upper-bound x) (lower-bound y))))
              
 (define (mul-interval x y)
   (let ((p1 (* (lower-bound x) (lower-bound y)))
