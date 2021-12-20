@@ -23,7 +23,7 @@
                  (max p1 p2 p3 p4))))
              
 (define (div-interval x y)
-  (if (< (lower-bound y) 0)
+  (if (and (< (lower-bound y) 0) (> (upper-bound y) 0))
       (error "Dividing by an interval that spans zero is prohibited!")
       (mul-interval
        x
