@@ -11,13 +11,13 @@ about it, she gets a frenzied call from an irate user, Lem E.
 Tweakit. It seems that Lem has noticed that the formula for
 parallel resistors can be written in two algebraically
 equivalent ways:
-$
+$$
 \frac{R1 \times R2}{R1 + R2}
-$
+$$
 and
-$
+$$
 \frac{1}{\frac{1}{R1} + \frac{2}{R2}}
-$
+$$
 He has written the following two programs, each of which
 computes the parallel-resistors formula diﬀerently:
 ```scheme
