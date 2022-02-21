@@ -1,3 +1,4 @@
+ <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  **2.13**: Show that under the assumption of small
 percentage tolerances there is a simple formula for the
 approximate percentage tolerance of the product of two in
