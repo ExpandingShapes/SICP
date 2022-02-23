@@ -34,19 +34,19 @@ computes the parallel-resistors formula diﬀerently:
 Lem complains that Alyssa’s program gives diﬀerent an-
 swers for the two ways of computing. This is a serious com
 plaint.  
-**Solution**: Let's take intervals A = [9.9, 10.1] and B = [19.92, 20.08] with centers in $c_1 = 10$, $c_2 = 20$ with tolerances $t_1 = 1$, $t_2 = 0.4$ respectively.
-$A \times B = [197.208, 202.808]$ with resulting tolerancy $t_{A \times B} = 1.4$
+**Solution**: Let's take intervals A = [9.9, 10.1] and B = [19.92, 20.08] with centers in $$c_1 = 10$$, $$c_2 = 20$$ with tolerances $$t_1 = 1$$, $$t_2 = 0.4$$ respectively.
+$$A \times B = [197.208, 202.808]$$ with resulting tolerancy $$t_{A \times B} = 1.4$$
 Trying out multiplying various will lead us to an idea that tolerance of the product of two intervals is sum of the tolerances of individual intervals. Let's confirm whether it is right or wrong!
 Again, we have intervals A and B but with no specific values.
 We assume endpoints of the intervals contain positive numbers only.
-As we know from 2.11 exercise solution, in this case the product of A and B will be [A's lower bound $\times$ B's lower bound, A's upper bound $\times$ B's upper bound]. In our terms,
-$
+As we know from 2.11 exercise solution, in this case the product of A and B will be [A's lower bound $$\times$$ B's lower bound, A's upper bound $$\times$$ B's upper bound]. In our terms,
+$$
 A \times B = [(c_A - \frac{c_A\cdot t_A}{100}) \times (c_B - \frac{c_B\cdot t_B}{100}),(c_A + \frac{c_A\cdot t_A}{100}) \times (c_B + \frac{c_B\cdot t_B}{100})]
 =[c_A \times c_B(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100} - \frac{c_A \cdot t_A + c_A \cdot t_B}{100},c_A \times c_B(1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100} + \frac{c_A \cdot t_A + c_A \cdot t_B}{100}))]
 =c_A \times c_B[(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100}), (1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100})]
-$
+$$
 It appears, $c_A \cdot t_A$ and $c_B \cdot t_B$ are small and $\frac{c_A \cdot t_A \cdot c_B \cdot t_B}{100}$ is significantly small. We can ignore it.
-$
+$$
 A \times B = c_A \cdot c_B[(1 - \frac{c_A \cdot t_A + c_B \cdot t_B}{100}),(1+ \frac{c_A \cdot t_A + c_B \cdot t_B}{100})]
-$
+$$
 Thus, our assumption is right.
