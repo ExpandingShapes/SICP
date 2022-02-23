@@ -11,9 +11,11 @@ about it, she gets a frenzied call from an irate user, Lem E.
 Tweakit. It seems that Lem has noticed that the formula for
 parallel resistors can be written in two algebraically
 equivalent ways:
+<div>
 $$
 \frac{R1 \times R2}{R1 + R2}
 $$
+ </div>
 and
 $$
 \frac{1}{\frac{1}{R1} + \frac{2}{R2}}
@@ -40,13 +42,26 @@ Trying out multiplying various will lead us to an idea that tolerance of the pro
 Again, we have intervals A and B but with no specific values.
 We assume endpoints of the intervals contain positive numbers only.
 As we know from 2.11 exercise solution, in this case the product of A and B will be [A's lower bound $$\times$$ B's lower bound, A's upper bound $$\times$$ B's upper bound]. In our terms,
+<div>
 $$
 A \times B = [(c_A - \frac{c_A\cdot t_A}{100}) \times (c_B - \frac{c_B\cdot t_B}{100}),(c_A + \frac{c_A\cdot t_A}{100}) \times (c_B + \frac{c_B\cdot t_B}{100})]
 =[c_A \times c_B(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100} - \frac{c_A \cdot t_A + c_A \cdot t_B}{100},c_A \times c_B(1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100} + \frac{c_A \cdot t_A + c_A \cdot t_B}{100}))]
 =c_A \times c_B[(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100}), (1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100})]
 $$
+ </div>
 It appears, $$c_A \cdot t_A$$ and $$c_B \cdot t_B$$ are small and $$\frac{c_A \cdot t_A \cdot c_B \cdot t_B}{100}$$ is significantly small. We can ignore it.
+<div>
 $$
 A \times B = c_A \cdot c_B[(1 - \frac{c_A \cdot t_A + c_B \cdot t_B}{100}),(1+ \frac{c_A \cdot t_A + c_B \cdot t_B}{100})]
 $$
+ </div>
 Thus, our assumption is right.
+
+**2.14**: Demonstrate that Lem is right. Investigate
+the behavior of the system on a variety of arithmetic ex-
+pressions. Make some intervals A and B, and use them in
+computing the expressions A/A and A/B. You will get the
+most insight by using intervals whose width is a small per-
+centage of the center value. Examine the results of the com-
+putation in center-percent form (see Exercise 2.12).
+**Solution**: 
