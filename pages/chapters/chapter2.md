@@ -45,7 +45,7 @@ A \times B = [(c_A - \frac{c_A\cdot t_A}{100}) \times (c_B - \frac{c_B\cdot t_B}
 =[c_A \times c_B(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100} - \frac{c_A \cdot t_A + c_A \cdot t_B}{100},c_A \times c_B(1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100} + \frac{c_A \cdot t_A + c_A \cdot t_B}{100}))]
 =c_A \times c_B[(1 - \frac{c_A \cdot t_A + c_A \cdot t_B}{100}), (1 + \frac{c_A \cdot t_A + c_A \cdot t_B}{100})]
 $$
-It appears, $c_A \cdot t_A$ and $c_B \cdot t_B$ are small and $\frac{c_A \cdot t_A \cdot c_B \cdot t_B}{100}$ is significantly small. We can ignore it.
+It appears, $$c_A \cdot t_A$$ and $$c_B \cdot t_B$$ are small and $$\frac{c_A \cdot t_A \cdot c_B \cdot t_B}{100}$$ is significantly small. We can ignore it.
 $$
 A \times B = c_A \cdot c_B[(1 - \frac{c_A \cdot t_A + c_B \cdot t_B}{100}),(1+ \frac{c_A \cdot t_A + c_B \cdot t_B}{100})]
 $$
