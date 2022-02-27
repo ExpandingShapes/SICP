@@ -63,5 +63,10 @@ pressions. Make some intervals A and B, and use them in
 computing the expressions A/A and A/B. You will get the
 most insight by using intervals whose width is a small per-
 centage of the center value. Examine the results of the com-
-putation in center-percent form (see Exercise 2.12).
-**Solution**: 
+putation in center-percent form (see Exercise 2.12).  
+**Solution**: Let's take intervals whose width is a small percentage of the center value A = [99, 101], B = [98, 102]
+Indeed, par1 and par2 give different results for $$\frac{A}{B}$$
+[47.79, 52.29] and [49.25, 50.75]. The same intervals in center percent form:
+$$50.04\pm4.5%$$ and $$50\pm1.5%$$.The second result's tolerance is smaller which means par2 algorithm is more precise.
+If we divide A by itself, we get intervals $$50.02\pm3$$ and $$50\pm1$$ depending on which par algorithm we chose while the result must be 1.
+The problem is our implementation doesn't take identity into account. So, every time we introduce the same interval the system interprets it as a new one. This issue brings up some uncertainty.
