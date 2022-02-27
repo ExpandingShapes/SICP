@@ -67,6 +67,17 @@ putation in center-percent form (see Exercise 2.12).
 **Solution**: Let's take intervals whose width is a small percentage of the center value A = [99, 101], B = [98, 102]
 Indeed, par1 and par2 give different results for $$\frac{A}{B}$$
 [47.79, 52.29] and [49.25, 50.75]. The same intervals in center percent form:
-$$50.04\pm4.5%$$ and $$50\pm1.5%$$.The second result's tolerance is smaller which means par2 algorithm is more precise.
+$$50.04\pm4.5%$$ and $$50\pm1.5%$$.We see smaller widths of the interval calculations get more precise they are. The second result's tolerance is smaller which means par2 algorithm is more precise.
 If we divide A by itself, we get intervals $$50.02\pm3$$ and $$50\pm1$$ depending on which par algorithm we chose while the result must be 1.
 The problem is our implementation doesn't take identity into account. So, every time we introduce the same interval the system interprets it as a new one. This issue brings up some uncertainty.
+
+**2.15**: Eva Lu Ator, another user, has also noticed
+the diﬀerent intervals computed by diﬀerent but algebraically
+equivalent expressions. She says that a formula to compute
+with intervals using Alyssa’s system will produce tighter
+error bounds if it can be written in such a form that no vari-
+able that represents an uncertain number is repeated. Thus,
+she says, par2 is a “better” program for parallel resistances
+than par1. Is she right? Why?
+**Solution**: Eva is totally right! First of all, we saw that par2 algorithm is more precise.
+Second, the uncertainty brought up by introducing the same number isn't yield into the result in par2 as it is in par1.
