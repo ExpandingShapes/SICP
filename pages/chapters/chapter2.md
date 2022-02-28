@@ -81,3 +81,11 @@ she says, par2 is a “better” program for parallel resistances
 than par1. Is she right? Why?
 **Solution**: Eva is totally right! First of all, we saw that par2 algorithm is more precise.
 Second, the uncertainty brought up by introducing the same number isn't yield into the result in par2 as it is in par1.
+
+**2.16**: Explain, in general, why equivalent alge-
+braic expressions may lead to diﬀerent answers. Can you
+devise an interval-arithmetic package that does not have
+this shortcoming, or is this task impossible? (Warning: This
+problem is very diﬃcult.)
+**Solution**: To make algebraic expressions lead to same results we need to introduce concepts of identity element and inverse element.
+IN PROGRESS
