@@ -89,3 +89,31 @@ this shortcoming, or is this task impossible? (Warning: This
 problem is very diﬃcult.)
 **Solution**: To make algebraic expressions lead to same results we need to introduce concepts of identity element and inverse element.
 IN PROGRESS
+
+**2.22** Louis Reasoner tries to rewrite the first square-
+list procedure of Exercise 2.21 so that it evolves an itera-
+tive process:
+```
+(define (square-list items)
+  (define (iter things answer)
+    (if (null? things)
+        answer
+        (iter (cdr things)
+              (cons (square (car things))
+                    answer))))
+  (iter items nil))
+```
+Unfortunately, defining square-list this way produces the
+answer list in the reverse order of the one desired. Why?
+Louis then tries to fix his bug by interchanging the argu-
+ments to cons:
+```
+(define (square-list items)
+  (define (iter things answer)
+    (if (null? things)
+        answer
+        (iter (cdr things)
+              (cons answer
+                    (square (car things))))))
+  (iter items nil))
+```
