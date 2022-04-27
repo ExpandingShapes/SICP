@@ -151,3 +151,64 @@ Suppose we evaluate the expression (list 1 (list 2 (list 3 4))). Give the result
 **Solution**:
 Interpreter result - (1 (2 (3 4)))
 IN PROGRESS
+
+** 2.25 **:
+Give combinations of cars and cdrs that
+will pick 7 from each of the following lists:
+(1 3 (5 7) 9)
+((7))
+(1 (2 (3 (4 (5 (6 7))))))
+
+**Solution**:
+```
+(car (cdr (car (cdr (cdr a)))))
+(car (car b))
+(car (cdr (car (cdr (car (cdr (car (cdr (car (cdr (car (cdr  c))))))))))))
+```
+** 2.26 **:
+Suppose we define x and y to be two lists:
+```
+(define x (list 1 2 3))
+(define y (list 4 5 6))
+```
+What result is printed by the interpreter in response to eval-
+uating each of the following expressions:
+```
+(append x y)
+(cons x y)
+(list x y)
+```
+
+** Solution **:
+`(append x y)
+>(1 2 3 4 5 6)
+`(cons x y)
+>((1 2 3) 4 5 6)
+`(list x y)
+>((1 2 3) (4 5 6))
+
+** 2.27 **:
+Modify your reverse procedure of Exercise 2.18 to produce a deep-reverse procedure that takes a list as argument and returns as its value the list with its elements reversed and with all sublists deep-reversed as well.
+For example,
+`(define x (list (list 1 2) (list 3 4)))
+>x
+>((1 2) (3 4))
+
+>(reverse x)
+>((3 4) (1 2))
+
+>(deep-reverse x)
+>((4 3) (2 1))
+
+** Solution **:
+```
+(define (deep-reverse items)
+  (define (iter old-items new-items)
+      (cond ((null? old-items) new-items)
+            ;we're on the last element
+            ((null? (cdr old-items)) (cons (reverse (car old-items))
+                                           new-items))
+            (else (iter (cdr old-items) (cons (reverse (car old-items))
+                                              new-items)))))
+  (iter items '()))
+```
