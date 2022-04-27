@@ -8,8 +8,10 @@
   (define (iter old-items new-items)
       (cond ((null? old-items) new-items)
             ;we're on the last element
-            ((null? (cdr old-items)) (cons (reverse (car old-items)) new-items))
-            (else (iter (cdr old-items) (cons (reverse (car old-items)) new-items)))))
+            ((null? (cdr old-items)) (cons (reverse (car old-items))
+                                           new-items))
+            (else (iter (cdr old-items) (cons (reverse (car old-items))
+                                              new-items)))))
   (iter items '()))
 
 ;tests
